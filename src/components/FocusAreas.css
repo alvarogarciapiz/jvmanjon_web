@@ -1,0 +1,98 @@
+.focus {
+  background: var(--paper);
+  border-bottom: 1px solid var(--line);
+}
+
+.focus__grid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: clamp(1.5rem, 4vw, 3.5rem);
+  padding-block: 2rem;
+}
+
+.focus__label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--muted);
+  max-width: 6.5rem;
+  line-height: 1.4;
+}
+
+.focus__list {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1.5rem;
+}
+
+.focus__item {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  position: relative;
+}
+
+/* Separadores verticales tenues entre áreas */
+.focus__item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: -0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 34px;
+  width: 1px;
+  background: var(--line);
+}
+
+.focus__icon {
+  color: var(--ink);
+  flex-shrink: 0;
+}
+
+.focus__text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.focus__title {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.focus__suffix {
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1080px) {
+  .focus__list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem 1rem;
+  }
+
+  .focus__item:nth-child(3n)::after {
+    display: none;
+  }
+}
+
+@media (max-width: 720px) {
+  .focus__grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .focus__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .focus__item::after {
+    display: none !important;
+  }
+}

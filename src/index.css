@@ -1,0 +1,197 @@
+/* ============================================================
+   Design system — Juan Vicente García Manjón
+   Paleta: crema cálida · azul marino profundo · acento dorado
+   ============================================================ */
+
+:root {
+  /* Fondos */
+  --cream: #ece5d7; /* fondo del hero */
+  --paper: #fbf9f3; /* secciones claras */
+  --tan: #d9c8a4; /* tarjeta destacada cálida */
+  --ink: #0b1622; /* azul marino profundo: footer, tarjetas, botones */
+  --ink-2: #0e1e2e; /* variación de marino para tarjetas */
+
+  /* Tinta / texto */
+  --text: #16202b; /* texto principal */
+  --text-soft: #3d4550;
+  --muted: #6c6559; /* texto tenue sobre crema */
+  --muted-cool: #939aa4; /* texto tenue sobre marino */
+
+  /* Acento */
+  --gold: #b0863a;
+  --gold-bright: #c4a052;
+
+  /* Líneas */
+  --line: #ddd5c4; /* bordes sobre crema/paper */
+  --line-dark: rgba(255, 255, 255, 0.12); /* bordes sobre marino */
+
+  /* Tipografía */
+  --serif: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  /* Ritmo */
+  --maxw: 1240px;
+  --pad: clamp(1.25rem, 5vw, 4rem);
+  --radius: 4px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--sans);
+  color: var(--text);
+  background: var(--paper);
+  line-height: 1.65;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--serif);
+  font-weight: 600;
+  line-height: 1.12;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* ---------- Utilidades ---------- */
+
+.container {
+  width: 100%;
+  max-width: var(--maxw);
+  margin-inline: auto;
+  padding-inline: var(--pad);
+}
+
+/* Etiqueta pequeña en mayúsculas con tracking (categorías, kickers) */
+.eyebrow {
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+/* Enlace "Leer más →" */
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--text);
+  transition: gap 0.2s ease, color 0.2s ease;
+}
+
+.text-link svg {
+  transition: transform 0.2s ease;
+}
+
+.text-link:hover {
+  color: var(--gold);
+}
+
+.text-link:hover svg {
+  transform: translateX(3px);
+}
+
+/* Botones */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.9rem 1.5rem;
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  border: 1px solid transparent;
+  border-radius: var(--radius);
+  transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.btn svg {
+  transition: transform 0.2s ease;
+}
+
+.btn:hover svg {
+  transform: translateX(3px);
+}
+
+.btn--primary {
+  background: var(--ink);
+  color: #fff;
+}
+
+.btn--primary:hover {
+  background: #142438;
+}
+
+.btn--ghost {
+  background: transparent;
+  color: var(--text);
+  border-color: var(--ink);
+}
+
+.btn--ghost:hover {
+  background: var(--ink);
+  color: #fff;
+}
+
+/* Foco accesible */
+:where(a, button, input):focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Respeta reduce-motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
