@@ -1,0 +1,135 @@
+.articulos {
+  background: var(--paper);
+  padding-block: clamp(2.5rem, 5vw, 4rem);
+}
+
+/* --- Filtros por categoría --- */
+.articulos__filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+}
+
+.chip {
+  padding: 0.45rem 1rem;
+  font-family: var(--sans);
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--text-soft);
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  transition: all 0.2s ease;
+}
+
+.chip:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+.chip.is-active {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: #fff;
+}
+
+/* --- Rejilla de artículos --- */
+.articulos__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(1.75rem, 3vw, 2.5rem);
+}
+
+.post {
+  display: flex;
+  flex-direction: column;
+}
+
+.post__media-link {
+  display: block;
+  overflow: hidden;
+  border-radius: var(--radius);
+}
+
+/* Zoom sutil de la ilustración al pasar por la tarjeta */
+.post__media-link > * {
+  transition: transform 0.45s ease;
+}
+
+.post:hover .post__media-link > * {
+  transform: scale(1.035);
+}
+
+/* Ilustración real (cuando el artículo tiene `image` en site.js) */
+.post__img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+
+.post__body {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1.1rem;
+  flex-grow: 1;
+}
+
+.post__title {
+  margin-top: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.post__title a {
+  transition: color 0.2s ease;
+}
+
+.post__title a:hover {
+  color: var(--gold);
+}
+
+.post__excerpt {
+  margin-top: 0.65rem;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--muted);
+  flex-grow: 1;
+}
+
+.post__meta {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.76rem;
+  letter-spacing: 0.03em;
+  color: var(--muted);
+}
+
+.post__dot {
+  color: var(--gold);
+}
+
+.post__time {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 980px) {
+  .articulos__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 620px) {
+  .articulos__grid {
+    grid-template-columns: 1fr;
+  }
+}

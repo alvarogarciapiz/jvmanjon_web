@@ -34,6 +34,11 @@
   position: relative;
 }
 
+.focus__item:hover .focus__icon {
+  color: var(--gold);
+  transform: translateY(-2px);
+}
+
 /* Separadores verticales tenues entre áreas */
 .focus__item:not(:last-child)::after {
   content: '';
@@ -49,6 +54,7 @@
 .focus__icon {
   color: var(--ink);
   flex-shrink: 0;
+  transition: color 0.25s ease, transform 0.25s ease;
 }
 
 .focus__text {

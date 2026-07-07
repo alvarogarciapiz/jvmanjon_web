@@ -1,0 +1,22 @@
+.page-header {
+  background: var(--cream);
+  border-bottom: 1px solid var(--line);
+  padding-block: clamp(3rem, 6vw, 5rem);
+}
+
+.page-header__title {
+  margin-top: 1.25rem;
+  font-size: clamp(2.1rem, 4.5vw, 3.2rem);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.08;
+  max-width: 20ch;
+  color: var(--text);
+}
+
+.page-header__lead {
+  margin-top: 1.5rem;
+  max-width: 58ch;
+  font-size: 1.05rem;
+  color: var(--text-soft);
+}

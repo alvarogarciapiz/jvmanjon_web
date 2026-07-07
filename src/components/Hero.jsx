@@ -1,12 +1,12 @@
 import Icon from './Icon'
-import Placeholder from './Placeholder'
+import retrato from '../img/juanvi.webp'
 import './Hero.css'
 
 export default function Hero() {
   return (
     <section className="hero" id="inicio">
       <div className="container hero__grid">
-        <div className="hero__content">
+        <div className="hero__content reveal">
           <p className="eyebrow hero__eyebrow">
             IA · Aprendizaje · Innovación · Estrategia
           </p>
@@ -33,12 +33,12 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="hero__media">
-          <Placeholder
-            tone="cream"
-            ratio="4 / 5"
-            label="Retrato"
+        <div className="hero__media reveal reveal-d1">
+          <img
+            src={retrato}
+            alt="Juan Vicente García Manjón"
             className="hero__photo"
+            fetchpriority="high"
           />
 
           <figure className="hero__quote">

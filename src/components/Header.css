@@ -4,6 +4,15 @@
   z-index: 100;
   background: var(--cream);
   border-bottom: 1px solid var(--line);
+  transition: background 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Con la página desplazada: leve transparencia, blur y sombra */
+.header.is-scrolled {
+  background: rgba(236, 229, 215, 0.88);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 10px 30px -18px rgba(11, 22, 34, 0.28);
 }
 
 .header__bar {
@@ -90,6 +99,15 @@
   transform: scaleX(1);
 }
 
+/* Página actual */
+.nav__link.is-active {
+  color: var(--gold);
+}
+
+.nav__link.is-active::after {
+  transform: scaleX(1);
+}
+
 /* --- Acciones --- */
 .header__actions {
   display: flex;
@@ -154,7 +172,8 @@
   color: var(--text);
 }
 
-.mobile-nav__link:hover {
+.mobile-nav__link:hover,
+.mobile-nav__link.is-active {
   color: var(--gold);
 }
 
@@ -165,7 +184,8 @@
 }
 
 /* ---------- Responsive ---------- */
-@media (max-width: 1080px) {
+/* Con 7 elementos de menú, la navegación no cabe por debajo de ~1200px */
+@media (max-width: 1200px) {
   .nav,
   .header__newsletter {
     display: none;

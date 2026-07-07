@@ -1,0 +1,86 @@
+.recursos {
+  background: var(--paper);
+  padding-block: clamp(2.5rem, 5vw, 4rem);
+}
+
+.recursos__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(1.25rem, 2.5vw, 2rem);
+}
+
+.recurso__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.recurso__icon {
+  display: inline-flex;
+  color: var(--gold);
+}
+
+.recurso__type {
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.3rem 0.75rem;
+}
+
+.recurso__title {
+  margin-top: 1.1rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.recurso__text {
+  margin-top: 0.7rem;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--text-soft);
+}
+
+.recurso__link {
+  margin-top: 1.1rem;
+}
+
+/* --- Nota newsletter --- */
+.recursos__note {
+  margin-top: clamp(2rem, 4vw, 3rem);
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+  background: var(--cream);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.recursos__note-text {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--text);
+  max-width: 46ch;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 720px) {
+  .recursos__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .recursos__note .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

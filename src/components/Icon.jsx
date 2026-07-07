@@ -78,6 +78,48 @@ const paths = {
     </>
   ),
 
+  // --- Recursos y páginas interiores ---
+  chat: (
+    <>
+      <path d="M4 6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H9l-4 4V6Z" />
+      <path d="M8.5 9h7" />
+      <path d="M8.5 12.5h4.5" />
+    </>
+  ),
+  layout: (
+    <>
+      <rect x="4" y="4" width="16" height="16" rx="2" />
+      <path d="M4 10h16" />
+      <path d="M10 10v10" />
+    </>
+  ),
+  map: (
+    <>
+      <path d="m9 4-5 2v14l5-2 6 2 5-2V4l-5 2-6-2Z" />
+      <path d="M9 4v14" />
+      <path d="M15 6v14" />
+    </>
+  ),
+  clock: (
+    <>
+      <circle cx="12" cy="12" r="8.5" />
+      <path d="M12 7.5V12l3 2" />
+    </>
+  ),
+  check: (
+    <>
+      <path d="m5 12.5 4.5 4.5L19 7.5" />
+    </>
+  ),
+  calendar: (
+    <>
+      <rect x="4" y="5.5" width="16" height="15" rx="2" />
+      <path d="M8 3.5v4" />
+      <path d="M16 3.5v4" />
+      <path d="M4 10.5h16" />
+    </>
+  ),
+
   // --- Interfaz ---
   arrowRight: (
     <>

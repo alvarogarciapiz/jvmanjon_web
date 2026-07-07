@@ -43,6 +43,13 @@
 
 html {
   scroll-behavior: smooth;
+  color-scheme: light;
+}
+
+/* Selección de texto con la identidad de la marca */
+::selection {
+  background: var(--gold);
+  color: #fff;
 }
 
 body {
@@ -65,10 +72,12 @@ h4 {
   line-height: 1.12;
   margin: 0;
   letter-spacing: -0.01em;
+  text-wrap: balance; /* titulares sin líneas huérfanas */
 }
 
 p {
   margin: 0;
+  text-wrap: pretty;
 }
 
 a {
@@ -92,6 +101,11 @@ ul {
   list-style: none;
 }
 
+/* Las anclas (#ideas, #frameworks…) no quedan tapadas por la cabecera fija */
+[id] {
+  scroll-margin-top: 92px;
+}
+
 /* ---------- Utilidades ---------- */
 
 .container {
@@ -99,6 +113,52 @@ ul {
   max-width: var(--maxw);
   margin-inline: auto;
   padding-inline: var(--pad);
+}
+
+/* Tarjeta con borde sobre fondo claro (páginas interiores) */
+.panel {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+  transition: transform 0.25s ease, box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.panel:hover {
+  transform: translateY(-3px);
+  border-color: #cbbd9c;
+  box-shadow: 0 18px 36px -24px rgba(11, 22, 34, 0.25);
+}
+
+/* Cabecera de sección: título con marca dorada + enlace opcional a la derecha */
+.section-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  padding-bottom: 1.75rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.section-head__title {
+  position: relative;
+  font-size: clamp(1.15rem, 2.2vw, 1.4rem);
+  font-weight: 600;
+  padding-left: 1rem;
+}
+
+.section-head__title::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.15em;
+  height: 1em;
+  width: 3px;
+  background: var(--gold);
+  border-radius: 2px;
 }
 
 /* Etiqueta pequeña en mayúsculas con tracking (categorías, kickers) */
@@ -156,6 +216,14 @@ ul {
   transition: transform 0.2s ease;
 }
 
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
 .btn:hover svg {
   transform: translateX(3px);
 }
@@ -167,6 +235,7 @@ ul {
 
 .btn--primary:hover {
   background: #142438;
+  box-shadow: 0 12px 24px -12px rgba(11, 22, 34, 0.5);
 }
 
 .btn--ghost {
@@ -185,6 +254,48 @@ ul {
   outline: 2px solid var(--gold);
   outline-offset: 3px;
   border-radius: 2px;
+}
+
+/* Enlace "saltar al contenido" (visible solo al navegar con teclado) */
+.skip-link {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 300;
+  padding: 0.75rem 1.25rem;
+  background: var(--ink);
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  border-radius: var(--radius);
+  transform: translateY(-250%);
+  transition: transform 0.2s ease;
+}
+
+.skip-link:focus {
+  transform: none;
+}
+
+/* ---------- Aparición al hacer scroll (useScrollReveal) ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Retardos para escalonar elementos de una misma rejilla */
+.reveal-d1 {
+  transition-delay: 90ms;
+}
+
+.reveal-d2 {
+  transition-delay: 180ms;
 }
 
 /* Respeta reduce-motion */

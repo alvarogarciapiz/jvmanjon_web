@@ -9,8 +9,11 @@ export default function FocusAreas() {
         <p className="focus__label">Áreas de enfoque</p>
 
         <ul className="focus__list">
-          {focusAreas.map((area) => (
-            <li className="focus__item" key={area.title}>
+          {focusAreas.map((area, i) => (
+            <li
+              className={`focus__item reveal${i % 3 ? ` reveal-d${i % 3}` : ''}`}
+              key={area.title}
+            >
               <span className="focus__icon">
                 <Icon name={area.icon} size={26} strokeWidth={1.3} />
               </span>

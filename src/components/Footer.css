@@ -107,6 +107,15 @@
   color: var(--gold-bright);
 }
 
+/* Redes externas: mismo estilo, con un guiño dorado para distinguirlas */
+.footer__nav-link--ext {
+  color: var(--gold-bright);
+}
+
+.footer__nav-link--ext:hover {
+  color: #fff;
+}
+
 .footer__copy {
   font-size: 0.72rem;
   letter-spacing: 0.04em;

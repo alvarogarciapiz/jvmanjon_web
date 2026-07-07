@@ -49,6 +49,11 @@
 }
 
 .hero__photo {
+  width: 100%;
+  aspect-ratio: 1 / 1.05;
+  object-fit: cover;
+  object-position: center;
+  border-radius: var(--radius);
   box-shadow: 0 30px 60px -30px rgba(11, 22, 34, 0.45);
 }
 
