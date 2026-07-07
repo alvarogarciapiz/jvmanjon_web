@@ -1,0 +1,21 @@
+# Juan Vicente García Manjón
+
+> Web personal de Juan Vicente García Manjón, doctor (PhD), profesor universitario, investigador y divulgador. Ayuda a personas y organizaciones a innovar, aprender y decidir mejor en la era de la inteligencia artificial. Reconocido como LinkedIn Top Voice en innovación y autor de «Technological Innovation: Strategy and Management» (World Scientific).
+
+Temas principales del sitio: inteligencia artificial aplicada, aprendizaje aumentado, innovación, estrategia y educación. Ofrece conferencias, masterclasses, programas de formación para empresas y docentes, y recursos prácticos (test, guías, prompts y plantillas). Sus artículos y recursos se publican primero en su newsletter de Substack. El contenido del sitio está en castellano (es-ES).
+
+## Páginas
+
+- [Inicio](https://jvmanjon.com/): presentación, áreas de enfoque (aprendizaje, pensamiento, creatividad, decisión, liderazgo e innovación aumentados) y artículos destacados
+- [Artículos](https://jvmanjon.com/articulos): reflexiones y análisis sobre IA, aprendizaje, innovación y estrategia, filtrables por categoría
+- [Conferencias](https://jvmanjon.com/conferencias): conferencias y masterclasses sobre IA, innovación y educación; temas, formatos (keynote, masterclass, jornada) y contacto
+- [Formación](https://jvmanjon.com/formacion): programas y talleres para profesionales, directivos y docentes en la era de la IA
+- [Recursos](https://jvmanjon.com/recursos): test de mentalidad innovadora, guías, prompts y plantillas para aplicar la IA con propósito
+- [Sobre mí](https://jvmanjon.com/sobre-mi): biografía, líneas de investigación y publicaciones
+
+## Perfiles y publicaciones
+
+- [Newsletter en Substack](https://jvmanjon.substack.com): artículos, frameworks y recursos sobre IA, aprendizaje e innovación; también canal de contacto
+- [LinkedIn](https://www.linkedin.com/in/jvmanjon/): perfil profesional y contacto para conferencias y formación; LinkedIn Top Voice en innovación
+- [Technological Innovation: Strategy and Management](https://www.worldscientific.com/worldscibooks/10.1142/11584): libro sobre estrategia y gestión de la innovación tecnológica, publicado por World Scientific
+- [Test de mentalidad innovadora](https://innovation-index.anvil.app): herramienta gratuita de autoevaluación del perfil innovador
